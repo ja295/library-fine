@@ -1,0 +1,46 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int bookID, due_Date, Return_Date;
+    
+     printf("\nenter book Id:");
+     scanf("%d", &bookID);
+     
+     printf("\nenter due date:");
+     scanf("%d",&due_Date);
+     
+     printf("\nenter return date:");
+     scanf("%d",&Return_Date);
+     
+     int due_days;
+     due_days=Return_Date-due_Date;
+     printf("\nover due days=%d days",due_days);
+     
+     float charges;
+     if(due_days<=7){
+         charges=due_days*20;
+         printf("\namount charged:%.2f", charges);
+        
+     }
+     
+     else if(due_days<=14){
+         charges=((7*20)+(due_days-7)*50);
+         printf("\namount charged:%.2fksh", charges);
+        
+         
+     }
+      
+     else {
+         charges=((7*20)+(7*50)+(due_days-14)*100);
+         printf("\namount charged:%.2fksh", charges);
+         
+     }
+    
+    
+    
+   
+    printf("\nTry programiz.pro");
+
+    return 0;
+}
